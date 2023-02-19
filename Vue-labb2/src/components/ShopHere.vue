@@ -1,12 +1,13 @@
+<!-- Hann tyvärr inte göra klart denna shop -->
 <script setup>
 import ShopView from '../views/ShopView.vue'
 </script>
 
 <template>
     <div class="shop">
-      <h1>Shop</h1>
+      <h1>Shoppa loss här :)</h1>
       <div class="container text-center">
-      <p>Logga in:</p>
+      <p>Våra produkter:</p>
       <div id="app">
 
               <div class="row align-items-start">
@@ -22,7 +23,7 @@ import ShopView from '../views/ShopView.vue'
           <tr :key="(product, index) in products">
             <td>{{product.name}}</td>
             <td>{{products.quantity}}</td>
-            <td> {{product.price}}</td>
+            <td> {{products.price}}</td>
             <td><input @click="addToCart(index)" type="button" value="+"></td>
           </tr>
 
@@ -50,19 +51,19 @@ import ShopView from '../views/ShopView.vue'
     data() {
       return {
         products: {
-          'dd3ce0a3-1d30-4e3e-bcec-7095590019d9': {
-            name: 'Jacket',
-            price: 200,
-            quantity: 0
-          },
-          'faf68d1f-8f3e-4668-891c-56118cc330f4': {
-            name: 'Pants',
+          '1': {
+            name: 'Blomsterbukett Small',
             price: 100,
             quantity: 0
           },
-          'dd2bb41e-7f0a-4cb8-884b-588f9457dd54': {
-            name: 'Shoes',
+          '2': {
+            name: 'Krukväxt Medium',
             price: 100,
+            quantity: 0
+          },
+          '3': {
+            name: 'Blomsterbukett Lyx',
+            price: 300,
             quantity: 0
           }
         }

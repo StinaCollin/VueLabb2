@@ -1,14 +1,4 @@
 <script setup>
-import WelcomeItem from './WelcomeItem.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
-import ContactUsVue from './ContactUs.vue'
-
-import http from 'node:http';
-import https from 'node:https';
 import ShopView from '../views/ShopView.vue'
 import ShopHere from '../components/ShopHere.vue'
 import ContactUs from '../components/ContactUs.vue'
@@ -18,13 +8,14 @@ import ContactUs from '../components/ContactUs.vue'
 
     <img src="../assets/img/bouquet_hero.jpg" alt="Hero" width="500">
 
-        <!-- Textinterpolering -->
+        <!-- Textinterpolation -->
          <h2 class="title">{{ message }}</h2>
-         <!-- Fetch -->
+
     <div id="contact">
+        <!-- Bootstrap cards -->
         <div class="container text-center">
             <div class="row align-items-start">
-
+                <!-- Fetch API for each item in API list -->
                <contact-us v-for="user in list"  :key="user.name" :list="user"/>
 
             </div>
@@ -43,8 +34,7 @@ import ContactUs from '../components/ContactUs.vue'
             }
         },
         components: { 'contact-us': ContactUs },
-        /* mounted () : it will executed before creating the component. created () : it will executed after creating the component for render. */
-        mounted() {
+         mounted() {
             this.fetchData()
         },
         methods: {
@@ -58,15 +48,16 @@ import ContactUs from '../components/ContactUs.vue'
 </script>
 <style>
     #contact {
-
         justify-content: center;
         margin-top: 5vh;
         margin-bottom: 5vh;
+        border: 1;
     }
     .title,
     h2 {
 
         justify-content: center;
         margin-top: 3vh;
+        margin-bottom: 3vh;
     }
 </style>

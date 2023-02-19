@@ -1,11 +1,12 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import ShopView from './views/ShopView.vue';
 </script>
 
 <template>
   <header>
-    <img alt="blomsterkransen logo" class="logo" src="@/assets/img/cherry-blossom.png" width="125" height="125" />
+    <img alt="blomsterkransen logo" class="logo" src="@/assets/img/sakura.png" width="125" height="125" />
 
     <div class="wrapper">
       <HelloWorld msg="Varmt välkomna till oss på Blomsterkransen!" />
